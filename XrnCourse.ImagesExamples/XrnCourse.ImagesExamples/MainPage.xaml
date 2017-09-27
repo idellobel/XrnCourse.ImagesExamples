@@ -4,8 +4,22 @@
              xmlns:local="clr-namespace:XrnCourse.ImagesExamples"
              x:Class="XrnCourse.ImagesExamples.MainPage">
 
-	<Label Text="Welcome to Xamarin Forms!" 
+	<!--<Label Text="Welcome to Xamarin Forms!" 
            VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+           HorizontalOptions="Center" />-->
+    <AbsoluteLayout>
+        <Image
+               Aspect="AspectFill"
+               AbsoluteLayout.LayoutFlags="All"
+               AbsoluteLayout.LayoutBounds="0,0,1,1">
+            <Image.Source>
+                <OnPlatform x:TypeArguments="ImageSource">
+                    <On Platform="iOS,Android">clouds.jpg</On>
+                    <On Platform="Windows">images/clouds.jpg</On>
+                </OnPlatform>
+            </Image.Source>
+        </Image>
+    </AbsoluteLayout>
+    
 
 </ContentPage>
